@@ -3,6 +3,8 @@ This project is a full-stack tech quiz application built with the MERN stack. Th
 
 
 ## Walkthrough Video
+- https://app.screencastify.com/v3/watch/XRXxczasJCcwiCJ20yUZ
+
 
 
 ## Links
