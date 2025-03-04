@@ -1,25 +1,17 @@
-/// <reference types="cypress" />
-
-import { describe, it } from 'node:test';
-import Quiz from '../../client/src/components/Quiz'; // adjust the import path as needed
+import React from 'react';
+import { mount } from 'cypress/react';
+import Quiz from '../../client/src/components/Quiz';
 
 describe('Quiz Component', () => {
-  it('renders the start button', () => {
+  it('renders the start quiz button', () => {
     mount(<Quiz />);
-    cy.get('button').contains('Start').should('exist');
+    cy.get('[data-cy="start-quiz"]').should('be.visible');
   });
 
-  it('starts the quiz on button click and displays a question', () => {
+  it('starts the quiz on clicking start button', () => {
     mount(<Quiz />);
-    cy.get('button').contains('Start').click();
-    // Adjust selector to match your question element (e.g., class or id)
-    cy.get('.question').should('be.visible');
+    cy.get('[data-cy="start-quiz"]').click();
+    // Since questions are loaded asynchronously, wait for the question text
+    cy.get('[data-cy="question-text"]', { timeout: 10000 }).should('be.visible');
   });
 });
-
-/**
- * @param {import("react/jsx-runtime").JSX.Element} _arg0
- */
-function mount(_arg0) {
-  throw new Error('Function not implemented.');
-}
