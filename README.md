@@ -14,12 +14,12 @@ A full-stack MERN application that allows users to take a tech quiz with 10 rand
 This project uses Cypress for testing.
 
 - Run all tests (component & end-to-end):
-- Copy
-  - npm run test
-  - Component tests are located in cypress/component/Quiz.cy.jsx and end-to-end tests in cypress/e2e/quiz.cy.js.
+  - npx cypress run
 
 
-## Walkthrough Video
+## Walkthrough Videos
+- https://app.screencastify.com/v3/watch/iSRzQ1x06NJsTwr3lTTo
+- https://app.screencastify.com/v3/watch/c3dw3vzKN84rYGzKkFAz
 
 ## Links
 - https://github.com/asteining/Module-Challenge-19-Aramis-Steininger
